@@ -183,8 +183,9 @@ p {
   font-weight: 500;
 }
 
-.btn--flex {
-  display: flex;
+.btn--inline-flex {
+  display: inline-flex;
+  flex-direction: row;
   gap: 6px;
   justify-content: center;
   align-items: center;
@@ -244,6 +245,10 @@ p {
 .hero--call-to-action {
   display: flex;
   gap: 2rem;
+}
+
+.hero--content {
+  margin-bottom: 3.2rem;
 }
 
 @media screen and (max-width: 500px) {
@@ -356,6 +361,10 @@ p {
   background-color: rgba(251, 251, 251, 1);
 }
 
+.early-access__link-content .btn--flex {
+  gap: 1rem;
+}
+
 .early-access__content {
   padding-top: 8rem;
   text-align: center;
@@ -373,4 +382,39 @@ p {
 
 .container .early-access {
   margin-bottom: 12rem;
+}
+
+.footer {
+  background-color: rgba(0, 25, 49, 1);
+}
+
+footer .card__flex_row {
+  justify-content: space-between;
+}
+
+.footer__top {
+  padding-top: 12rem;
+  padding-bottom: 8rem;
+}
+
+.social p {
+  font-size: 2rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+
+.footer__bottom p {
+  text-align: center;
+  color: #fafafa;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-bottom: 3rem;
+  margin: 0;
 }
