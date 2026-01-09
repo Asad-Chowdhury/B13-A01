@@ -1,57 +1,141 @@
-/* Basic Styles */
+/*Basic styles*/
 :root {
---color-primary: #fff;
---color-secondary: #000;
---color-accent: #30B868;
---color-headings: #001931;
---color-body: #627382;
+  --color-primary: #fff;
+  --color-secondary: #000;
+  --color-accent: #30b868;
+  --color-headings: #001931;
+  --color-body: #627382;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
 }
 
 /* Typography */
 html {
-font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-font-family: Inter, Arial, Helvetica, sans-serif;
-font-size: 1.8rem;
-line-height: 1.5;
-font-weight: 400;
-color: var(--color-body);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-body);
 }
 
-h1, h2, h3 {
-color: var(--color-headings);
-font-weight: 700;
-margin: 0;
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  font-weight: 700;
+  margin: 0;
 }
 
 h1 {
-font-size: 7.2rem;
-line-height: 8.4rem;
+  font-size: 7.2rem;
+  line-height: 8.4rem;
 }
 
 h1 .heading__primary {
-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 h1 .heading__accent {
-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 h2 {
-font-size: 4.8rem;
-line-height: 5.8rem;
+  font-size: 4.8rem;
+  line-height: 5.8rem;
 }
 
 h3 {
-font-weight: 600;
-font-size: 2.4rem;
-line-height: 2.9rem;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
 }
 
 p {
-font-size: 1.6rem;
-font-weight: 400;
-line-height: 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.list--inline .list__item:nth-child(even)::before {
+  content: "• ";
+  margin-right: 0.5rem;
+}
+
+.list--tick {
+  list-style-image: url(/images/CheckCircle.png);
+  padding-left: 3rem;
+  color: var(--color-headings);
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Logo */
+.logo {
+  width: 120px;
+  height: 60px;
+}
+
+/* Navbar */
+.nav__list {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: 0;
+}
+
+.nav__item {
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+}
+
+.nav__item > a {
+  color: var(--color-secondary);
+  transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+  color: var(--color-accent);
+}
+
+/* Call to Action button */
+.cta--button {
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-secondary);
+  border-radius: 4px;
+  padding: 1.2rem 1.6rem;
+}
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
 }
