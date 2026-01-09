@@ -203,8 +203,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2.4rem;
-  margin-bottom: 2.4rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
 }
 
 /* Hero Section */
@@ -219,10 +219,6 @@ p {
   justify-content: center;
   align-items: center;
 }
-
-/* .hero--content {
-    text-align: center;
-} */
 
 .hero--heading {
   text-align: center;
@@ -262,9 +258,20 @@ p {
   display: grid;
 }
 
-.grid--cols-4 {
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2.4rem;
+@media screen and (min-width: 900px) {
+  .grid--cols-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+  }
+
+  .grid--cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6rem;
+  }
+}
+
+.grid img {
+  width: 80%;
 }
 
 .card {
@@ -304,4 +311,26 @@ p {
 .note-section {
   margin-top: 6rem;
   text-align: center;
+}
+
+/* Second Brain Section */
+
+.second-brain {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+
+.second-brain .card__flex_column {
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.second-brain__content p:first-child {
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.second-brain__content h2 {
+  text-transform: capitalize;
 }
