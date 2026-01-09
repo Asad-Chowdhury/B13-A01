@@ -129,14 +129,80 @@ p {
   color: var(--color-accent);
 }
 
-/* Call to Action button */
-.cta--button {
+/* Button */
+
+
+.btn {
+    border: 1px solid var(--color-secondary);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-transform: capitalize;
+    border-radius: 4px;
+    padding: 1.2rem 1.6rem;
+}
+
+.btn > a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+}
+
+.btn--secondary {
+    border: 1px solid var(--color-primary);
+    background-color: none;
+}
+
+.btn--cta {
   color: var(--color-primary);
   background-color: var(--color-accent);
   border: 1px solid var(--color-secondary);
   border-radius: 4px;
   padding: 1.2rem 1.6rem;
 }
+
+.btn--decoration {
+    background-color: var(--color-primary);
+    width: 24rem;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid var(--color-secondary);
+    border-radius: 1000px;
+
+}
+
+.btn--decoration p {
+    margin: 0;
+    color: var(--color-accent);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.btn--flex{
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.btn__hero-icon {
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-accent);
+    border-radius: 8px;
+    box-shadow: 0 4 4px 0 000000,25%;
+    
+}
+
 /* Header */
 .header {
   display: flex;
@@ -144,4 +210,54 @@ p {
   align-items: center;
   margin-top: 2.4rem;
   margin-bottom: 2.4rem;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url(../images/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .hero--content {
+    text-align: center;
+} */
+
+.hero--heading {
+    text-align: center;
+}
+
+.heading--primary {
+    color: var(--color-primary);
+    text-transform: capitalize;
+}
+
+.heading--accent {
+    text-transform: capitalize;
+    color: var(--color-accent);
+}
+
+.hero--body {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+.hero--call-to-action {
+    display: flex;
+    gap: 2rem;
+}
+
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 1rem;
+    }
 }
