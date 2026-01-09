@@ -334,3 +334,43 @@ p {
 .second-brain__content h2 {
   text-transform: capitalize;
 }
+
+@media screen and (max-width: 900px) {
+  .grid--cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .second-brain img {
+    justify-self: center;
+    max-width: 100%;
+  }
+
+  .second-brain .card__flex_column {
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+.early-access {
+  background-color: rgba(251, 251, 251, 1);
+}
+
+.early-access__content {
+  padding-top: 8rem;
+  text-align: center;
+  padding-bottom: 8rem;
+}
+
+.early-access__content .card__flex_column {
+  gap: 2.4rem;
+}
+
+.early-access__text-content h2 {
+  text-transform: capitalize;
+  font-size: 4rem;
+}
+
+.container .early-access {
+  margin-bottom: 12rem;
+}
